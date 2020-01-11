@@ -1,0 +1,14 @@
+server:
+  port: 10086
+spring:
+  application:
+    name: wh-eureka
+eureka:
+  client:
+    service-url:
+      fetch-registry: false #获取注册表
+      register-with-eureka: false #是否注册自己 默认是true
+      defaultZone: http://127.0.0.1:${server.port}/eureka
+  server:
+    enable-self-preservation: false # 关闭自我保护 测试时候使用，生产建议使用默认机制
+    eviction-interval-timer-in-ms: 5000 # 每隔5秒进行一次服务列表清理

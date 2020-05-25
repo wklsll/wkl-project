@@ -16,7 +16,8 @@ public class TestController {
     @RequestMapping("s")
     public String s(@RequestParam("id") int id) {
         if (id % 2 == 0) {
-            throw new RuntimeException();
+            int i=2/0;
+           // throw new RuntimeException();
         }
         return test.tt();
 

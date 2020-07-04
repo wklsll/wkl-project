@@ -14,10 +14,9 @@ public class TestController {
     Test test;
 
     @RequestMapping("s")
-    public String s(@RequestParam("id") int id) {
-        if (id % 2 == 0) {
-           // int i=2/0;
-           // throw new RuntimeException();
+    public String s(@RequestParam("id") int id) throws InterruptedException {
+        if (id % 2 == 0) { // 熔断
+      //     Thread.sleep(5000);
         }
         return test.tt();
 

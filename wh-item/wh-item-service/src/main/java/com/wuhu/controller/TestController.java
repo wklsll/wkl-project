@@ -8,7 +8,8 @@ import org.springframework.web.bind.annotation.RestController;
 public class TestController {
 
     @RequestMapping("tt")
-    public String tt(){
+    public String tt() throws InterruptedException {
+        Thread.sleep(5000);
         return "hello,";
     }
 }
